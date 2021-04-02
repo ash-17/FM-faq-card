@@ -45,9 +45,10 @@ a, a:hover{
     padding: 2em 1.5em;
 }
 
-.questions .answer{
+.answer{
     color: hsl(240, 6%, 50%);
-    margin-top: 0.5em;
+    display: none;
+    pointer-events: none;
 }
 
 .container{
@@ -61,7 +62,37 @@ a, a:hover{
     position: relative;
 }
 
-hr{
+
+.header-text{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 3.5em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.answer.active{
+    display: block;
+    padding-top: 1em;
+    opacity: 1;
+}
+
+.question.active{
+    font-weight: 700;
+}
+
+.arrow-down{
+    position: absolute;
+    right: 1.5em;
+    width: 12px;
+    padding-top: 3px;
+}
+
+.arrow-down.active{
+    transform: rotateX(180deg);
+}
+
+hr{ 
     width: 100%;
     border: 1px solid hsl(240, 5%, 91%);
     margin: 1.2em auto;
@@ -72,42 +103,10 @@ hr{
     margin-bottom: 2em;
 }
 
-.header-text{
-    font-size: 32px;
-    text-align: center;
-    margin-top: 3.5em;
-    margin-bottom: 1em;
-    font-weight: 700;
-}
-
-.hide{
-    opacity: 0;
-    pointer-events: none;
-    height: 0;
-}
-
-.active{
-    font-weight: 700;
-}
-
-.arrow-down, .arrow-up{
-    position: absolute;
-    right: 1.5em;
-    width: 12px;
-    padding-top: 3px;
-}
-
-.arrow-up{
-    transform: rotateX(180deg);
-}
-
 .desktop-image, .desktop-bg, .box-img{
     display: none;
 }
 
-.question1 a:active + .answer{
-    opacity: 1;
-}
 
 @media(min-width:700px){
 
